@@ -15,6 +15,12 @@
     // Show current year
     $("#current-year").text(new Date().getFullYear());
 
+    function changeLanguage(language) {
+    // Ajoutez le code pour changer la langue de votre site en fonction de la variable 'language'
+    // Vous pouvez utiliser des bibliothèques comme i18n.js pour gérer les traductions
+    // Exemple : https://github.com/fnando/i18n-js
+    console.log("Changer la langue vers : " + language);
+}
     // Remove no-js class
     $('html').removeClass('no-js');
 
