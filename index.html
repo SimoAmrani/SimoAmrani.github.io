@@ -11,9 +11,32 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+	  <link rel="stylesheet" href="css/styles4.css">
+
 </head>
 
 <body>
+  <div class="container">
+    <div class="language" role="radiogroup" aria-labelledby="language-switcher2">
+      <p class="hidden" id="language-switcher2">Choose a language for this website</p>
+      <div class="language__container--left language__container--fr">
+        <input class="language__control" type="radio" id="language2-1" name="language-switch2">
+        <label class="language__label" for="language2-1">
+          FR<span class="hidden"> Français</span>
+        </label>
+      </div>
+      <div class="language__container--right language__container--en">
+        <input class="language__control" type="radio" id="language2-2" name="language-switch2" checked>
+        <label class="language__label" for="language2-2">
+          EN<span class="hidden"> English</span>
+        </label>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+<script src="js/prism.js"></script>
+	
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
