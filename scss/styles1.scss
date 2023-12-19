@@ -1,15 +1,14 @@
 // variables
-
-@import "core/variables-fonts";
-@import "core/variables-colors";
+@import "scss/variables-fonts";
+@import "scss/variables-colors";
 
 
 // modules
 
-@import "core/normalize.5.0.0";
-@import "core/prism";
-@import "core/base";
-@import "core/classes";
+@import "scss/normalize.5.0.0";
+@import "scss/prism";
+@import "scss/base";
+@import "scss/classes";
 
 
 // site specific
