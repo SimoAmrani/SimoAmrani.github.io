@@ -1,60 +1,55 @@
 <!DOCTYPE html>
-<html class="no-js" lang="fr" >
+<html class="no-js" lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-
 </head>
 
-<body>	
+<body>
+
 <select id="langue" onchange="changerLangue()">
-  <option value="fr">Français</option>
-  <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="en">English</option>
 </select>
-	
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+
+<div id="mobile-menu-open" class="shadow-large">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+
+<!-- End #mobile-menu-toggle -->
+<header>
+    <div id="mobile-menu-close">
+        <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-	   
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about" data-translate="aboutSection">À Propos de Moi</a>
-            </li>
-            <li>
-                <a href="#experience" data-translate="experienceSection">Expérience Professionnelle</a>
-            </li>
-            <li>
-                <a href="#education" data-translate="educationSection">Éducation</a>
-            </li>
-            <li>
-                <a href="#projects" data-translate="projectsSection">Compétences</a>
-            </li>
-            <li>
-                <a href="#skills" data-translate="skillsSection">Certifications Professionnelles et Annexes</a>
-            </li>
-            <li>
-                <a href="#contact" data-translate="contactSection">Contact</a>
-            </li>
-	
-        </ul>
-	
-		 
-    </header>
-    <!-- End header -->
-	
+    <ul id="menu" class="shadow">
+        <li>
+            <a href="#about" id="aboutLink" data-translate="aboutSection">À Propos de Moi</a>
+        </li>
+        <li>
+            <a href="#experience" id="experienceLink" data-translate="experienceSection">Expérience Professionnelle</a>
+        </li>
+        <li>
+            <a href="#education" id="educationLink" data-translate="educationSection">Éducation</a>
+        </li>
+        <li>
+            <a href="#projects" id="projectsLink" data-translate="projectsSection">Compétences</a>
+        </li>
+        <li>
+            <a href="#skills" id="skillsLink" data-translate="skillsSection">Certifications Professionnelles et Annexes</a>
+        </li>
+        <li>
+            <a href="#contact" id="contactLink" data-translate="contactSection">Contact</a>
+        </li>
+    </ul>
+</header>
 
     <div id="lead">
         <div id="lead-content">
@@ -583,24 +578,40 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
 <script>
+// Objets contenant les textes dans différentes langues
+var textes = {
+    fr: {
+        aboutSection: "À Propos de Moi",
+        aboutContent: "Contenu de la section 'À Propos de Moi'",
+        experienceSection: "Expérience Professionnelle",
+        experienceContent: "Contenu de la section 'Expérience Professionnelle'",
+        // Ajoutez d'autres textes en français au besoin
+    },
+    en: {
+        aboutSection: "About Me",
+        aboutContent: "Content of the 'About Me' section",
+        experienceSection: "Professional Experience",
+        experienceContent: "Content of the 'Professional Experience' section",
+        // Ajoutez d'autres textes en anglais au besoin
+    }
+};
+
+// Fonction pour changer la langue
 function changerLangue() {
-  var select = document.getElementById("langue");
-  var langueSelectionnee = select.options[select.selectedIndex].value;
+    var select = document.getElementById("langue");
+    var langueSelectionnee = select.options[select.selectedIndex].value;
 
-  // Utilisez la langue sélectionnée pour changer le contenu de votre page
-  // Par exemple, vous pourriez avoir des éléments avec des classes spécifiques pour chaque langue
-  // et les afficher ou masquer en fonction de la langue sélectionnée.
+    // Mettre à jour le contenu de chaque section en fonction de la langue sélectionnée
+    document.getElementById("aboutLink").textContent = textes[langueSelectionnee].aboutSection;
+    document.getElementById("aboutContent").textContent = textes[langueSelectionnee].aboutContent;
 
-  // Exemple : mettez en évidence le contenu en français, masquez le contenu en anglais
-  if (langueSelectionnee === "fr") {
-    // Afficher le contenu en français
-    document.body.style.backgroundColor = "lightblue";
-  } else {
-    // Masquer le contenu en français
-    document.body.style.backgroundColor = "white";
-  }
+    document.getElementById("experienceLink").textContent = textes[langueSelectionnee].experienceSection;
+    document.getElementById("experienceContent").textContent = textes[langueSelectionnee].experienceContent;
+
+    // Ajoutez d'autres mises à jour de contenu en fonction de la langue au besoin
 }
 </script>
+
 </body>
 
 </html>
