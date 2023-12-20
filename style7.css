@@ -1,5 +1,8 @@
 
-
+.wrapperIMG {
+	margin:80px auto;
+	width:50%;
+}
 .text_boxIMG{
 	color:##808080;
 }
