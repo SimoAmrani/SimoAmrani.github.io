@@ -15,7 +15,6 @@
 </head>
 
 <body>	
-	
 	<div class="language-switcher">
     <select id="language-selector">
         <option value="fr" selected>Français</option>
@@ -587,6 +586,7 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
     <script src="js/scripts.min.js"></script>
 
 <script>
+	document.addEventListener('DOMContentLoaded', function () {
     // Objet contenant les traductions
     const translations = {
         fr: {
@@ -642,6 +642,7 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
         const defaultLanguage = 'fr';
         updateContent(defaultLanguage);
     });
+		});
 </script>
 </body>
 
