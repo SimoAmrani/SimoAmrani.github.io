@@ -1,7 +1,7 @@
 
 .wrapperIMG {
 	margin:100px auto;
-	width:85%;
+	width:75%;
 }
 .text_boxIMG{
 	color:##808080;
@@ -24,4 +24,8 @@
 .projectLink p {
         text-align: left;
 	margin-left:15px;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
         }
