@@ -577,40 +577,8 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
-<script>
-// Objets contenant les textes dans différentes langues
-var textes = {
-    fr: {
-        aboutSection: "À Propos de Moi",
-        aboutContent: "Contenu de la section 'À Propos de Moi'",
-        experienceSection: "Expérience Professionnelle",
-        experienceContent: "Contenu de la section 'Expérience Professionnelle'",
-        // Ajoutez d'autres textes en français au besoin
-    },
-    en: {
-        aboutSection: "About Me",
-        aboutContent: "Content of the 'About Me' section",
-        experienceSection: "Professional Experience",
-        experienceContent: "Content of the 'Professional Experience' section",
-        // Ajoutez d'autres textes en anglais au besoin
-    }
-};
+    <script src="js/script2.js"></script>
 
-// Fonction pour changer la langue
-function changerLangue() {
-    var select = document.getElementById("langue");
-    var langueSelectionnee = select.options[select.selectedIndex].value;
-
-    // Mettre à jour le contenu de chaque section en fonction de la langue sélectionnée
-    document.getElementById("aboutLink").textContent = textes[langueSelectionnee].aboutSection;
-    document.getElementById("aboutContent").textContent = textes[langueSelectionnee].aboutContent;
-
-    document.getElementById("experienceLink").textContent = textes[langueSelectionnee].experienceSection;
-    document.getElementById("experienceContent").textContent = textes[langueSelectionnee].experienceContent;
-
-    // Ajoutez d'autres mises à jour de contenu en fonction de la langue au besoin
-}
-</script>
 
 </body>
 
