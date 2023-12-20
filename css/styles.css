@@ -15,7 +15,7 @@
 
 
 .rounded-image-about {
-    border-radius:20%; /* Pour rendre l'image arrondie */
+    border-radius:30%; /* Pour rendre l'image arrondie */
     width: 100%; /* Ajustez la largeur selon vos besoins */
     max-width: 200px; /* Ajustez la largeur maximale selon vos besoins */
     margin: 0 auto; /* Pour centrer l'image dans la colonne */
