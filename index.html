@@ -34,22 +34,22 @@
         </div>
         <ul id="menu" class="shadow">
             <li>
-                <a href="#about">À Propos de Moi</a>
+                <a href="#about" data-translate="aboutSection">À Propos de Moi</a>
             </li>
             <li>
-                <a href="#experience">Expérience Professionnelle</a>
+                <a href="#experience" data-translate="experienceSection">Expérience Professionnelle</a>
             </li>
             <li>
-                <a href="#education">Éducation</a>
+                <a href="#education" data-translate="educationSection">Éducation</a>
             </li>
             <li>
-                <a href="#projects">Compétences</a>
+                <a href="#projects" data-translate="projectsSection">Compétences</a>
             </li>
             <li>
-                <a href="#skills">Certifications Professionnelles et Annexes</a>
+                <a href="#skills" data-translate="skillsSection">Certifications Professionnelles et Annexes</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" data-translate="contactSection">Contact</a>
             </li>
 	
         </ul>
@@ -590,16 +590,21 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
     // Objet contenant les traductions
     const translations = {
         fr: {
-            welcomeMessage: "Bienvenue sur mon site!",
             aboutSection: "À propos de moi",
-            portfolioSection: "Mon Portfolio"
+            experienceSection: "Expérience professionnelle",
+            educationSection: "Éducation",
+            projectsSection: "Compétences",
+            skillsSection: "Certifications professionnelles et annexes",
+            contactSection: "Contact"
             // Ajoutez d'autres traductions au besoin
         },
         en: {
-            welcomeMessage: "Welcome to my site!",
             aboutSection: "About Me",
-            portfolioSection: "My Portfolio"
-            // Ajoutez d'autres traductions au besoin
+            experienceSection: "Professional Experience",
+            educationSection: "Education",
+            projectsSection: "Skills",
+            skillsSection: "Professional Certifications and Appendices",
+            contactSection: "Contact"
         }
     };
 
@@ -610,10 +615,12 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
 
     // Fonction pour mettre à jour le contenu de la page en fonction de la langue sélectionnée
     function updateContent(language) {
-        document.getElementById('welcome-message').textContent = getTranslation('welcomeMessage', language);
         document.getElementById('about-section').textContent = getTranslation('aboutSection', language);
-        document.getElementById('portfolio-section').textContent = getTranslation('portfolioSection', language);
-        // Mettez à jour d'autres éléments de la page au besoin
+        document.getElementById('experience-section').textContent = getTranslation('experienceSection', language);
+        document.getElementById('education-section').textContent = getTranslation('educationSection', language);
+        document.getElementById('projects-section').textContent = getTranslation('projectsSection', language);
+        document.getElementById('skills-section').textContent = getTranslation('skillsSection', language);
+        document.getElementById('contact-section').textContent = getTranslation('contactSection', language);
     }
 
     // Événement de changement de langue
