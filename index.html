@@ -612,6 +612,14 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
     function getTranslation(key, lang) {
         return translations[lang][key];
     }
+ function updateContent(language) {
+        // Mettez à jour le texte des liens du menu
+        const menuLinks = document.querySelectorAll('#menu a');
+        menuLinks.forEach(link => {
+            const sectionKey = link.getAttribute('data-translate');
+            link.textContent = getTranslation(sectionKey, language);
+        });
+    }
 
     // Fonction pour mettre à jour le contenu de la page en fonction de la langue sélectionnée
     function updateContent(language) {
