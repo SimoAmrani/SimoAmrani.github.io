@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mon Portfolio</title>
+    <title>Portfolio</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -587,39 +587,46 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
     <script src="js/scripts.min.js"></script>
 </div>
 <script>
-// Function to handle language change
-function changeLanguage() {
-    // Get the selected language
-    var selectedLanguage = document.getElementById('language-selector').value;
-
-    // Call a function to update the content based on the selected language
-    updateContent(selectedLanguage);
-}
-
-// Function to update content based on language
-function updateContent(language) {
-    // Define translations
-    var translations = {
-        'fr': {
-            // French translations here
-            'welcome_message': 'hihh'
+    // Objet contenant les traductions
+    const translations = {
+        fr: {
+            welcomeMessage: "Bienvenue sur mon site!",
+            aboutSection: "À propos de moi",
+            portfolioSection: "Mon Portfolio"
+            // Ajoutez d'autres traductions au besoin
         },
-        'en': {
-            // English translations here
-            'welcome_message': 'Welcome to my site!'
+        en: {
+            welcomeMessage: "Welcome to my site!",
+            aboutSection: "About Me",
+            portfolioSection: "My Portfolio"
+            // Ajoutez d'autres traductions au besoin
         }
     };
 
-    // Example: Update the welcome message based on the selected language
-    var welcomeMessage = document.getElementById('welcome-message');
-    welcomeMessage.innerText = translations[language]['welcome_message'];
-}
+    // Fonction pour obtenir la traduction en fonction de la clé et de la langue
+    function getTranslation(key, lang) {
+        return translations[lang][key];
+    }
 
-// Initial content update based on default language
-updateContent('fr');
+    // Fonction pour mettre à jour le contenu de la page en fonction de la langue sélectionnée
+    function updateContent(language) {
+        document.getElementById('welcome-message').textContent = getTranslation('welcomeMessage', language);
+        document.getElementById('about-section').textContent = getTranslation('aboutSection', language);
+        document.getElementById('portfolio-section').textContent = getTranslation('portfolioSection', language);
+        // Mettez à jour d'autres éléments de la page au besoin
+    }
 
-// Attach the change event listener to the language selector
-document.getElementById('language-selector').addEventListener('change', changeLanguage);
+    // Événement de changement de langue
+    document.getElementById('language-selector').addEventListener('change', function () {
+        const selectedLanguage = this.value;
+        updateContent(selectedLanguage);
+    });
+
+    // Appelez la fonction updateContent avec la langue par défaut (français) au chargement de la page
+    document.addEventListener('DOMContentLoaded', function () {
+        const defaultLanguage = 'fr';
+        updateContent(defaultLanguage);
+    });
 </script>
 </body>
 
