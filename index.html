@@ -12,50 +12,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
+</head>
+
+<body>	
+	
 	<div class="language-switcher">
     <select id="language-selector">
         <option value="fr" selected>Français</option>
         <option value="en">English</option>
     </select>
 </div>
-</head>
-<script>
-// Function to handle language change
-function changeLanguage() {
-    // Get the selected language
-    var selectedLanguage = document.getElementById('language-selector').value;
-
-    // Call a function to update the content based on the selected language
-    updateContent(selectedLanguage);
-}
-
-// Function to update content based on language
-function updateContent(language) {
-    // Define translations
-    var translations = {
-        'fr': {
-            // French translations here
-            'welcome_message': 'Bienvenue sur mon site!'
-        },
-        'en': {
-            // English translations here
-            'welcome_message': 'Welcome to my site!'
-        }
-    };
-
-    // Example: Update the welcome message based on the selected language
-    var welcomeMessage = document.getElementById('welcome-message');
-    welcomeMessage.innerText = translations[language]['welcome_message'];
-}
-
-// Initial content update based on default language
-updateContent('fr');
-
-// Attach the change event listener to the language selector
-document.getElementById('language-selector').addEventListener('change', changeLanguage);
-</script>
-<body>	
-	
 	<div id="welcome-message">
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
@@ -620,7 +586,41 @@ décrochant finalement le 3e prix. Source :<a href="PDF DU 18-05-2023 albayane.p
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </div>
+<script>
+// Function to handle language change
+function changeLanguage() {
+    // Get the selected language
+    var selectedLanguage = document.getElementById('language-selector').value;
 
+    // Call a function to update the content based on the selected language
+    updateContent(selectedLanguage);
+}
+
+// Function to update content based on language
+function updateContent(language) {
+    // Define translations
+    var translations = {
+        'fr': {
+            // French translations here
+            'welcome_message': 'Bienvenue sur mon site!'
+        },
+        'en': {
+            // English translations here
+            'welcome_message': 'Welcome to my site!'
+        }
+    };
+
+    // Example: Update the welcome message based on the selected language
+    var welcomeMessage = document.getElementById('welcome-message');
+    welcomeMessage.innerText = translations[language]['welcome_message'];
+}
+
+// Initial content update based on default language
+updateContent('fr');
+
+// Attach the change event listener to the language selector
+document.getElementById('language-selector').addEventListener('change', changeLanguage);
+</script>
 </body>
 
 </html>
