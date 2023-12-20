@@ -1,7 +1,7 @@
 
 .wrapperIMG {
 	margin:100px auto;
-	width:80%;
+	width:85%;
 }
 .text_boxIMG{
 	color:##808080;
@@ -22,8 +22,6 @@
             padding: 0;
         }
 .projectLink p {
-            text-align: left;
-            list-style: none;
-            padding: 0;
+        text-align: left;
 	margin-left:15px;
         }
