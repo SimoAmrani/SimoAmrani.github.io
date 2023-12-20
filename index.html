@@ -12,6 +12,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
+	<div class="language-switcher">
+    <select id="language-selector">
+        <option value="fr" selected>Français</option>
+        <option value="en">English</option>
+    </select>
+</div>
 </head>
 <script>
 // Function to handle language change
@@ -50,12 +56,6 @@ document.getElementById('language-selector').addEventListener('change', changeLa
 </script>
 <body>	
 	
-	<div class="language-switcher">
-    <select id="language-selector">
-        <option value="fr" selected>Français</option>
-        <option value="en">English</option>
-    </select>
-</div>
 	<div id="welcome-message">
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
